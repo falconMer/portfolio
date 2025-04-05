@@ -1,13 +1,12 @@
 [build]
-  command = "npm run netlify-build"
-  publish = ".next/standalone"
+  command = "npm run build && npm run export"
+  publish = "out"
 
 [build.environment]
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   NODE_VERSION = "18"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# Removed the Next.js plugin to avoid errors
 
 [[headers]]
   for = "/*"

@@ -5,10 +5,18 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
-  output: 'standalone',
+  // Enable static exports for Netlify deployment
+  output: 'export',
+  // Disable server components for static export
+  experimental: {
+    appDir: true,
+  },
+  // Disable image optimization for static export
   images: {
     unoptimized: true,
   },
+  // Disable trailing slashes in URLs
+  trailingSlash: false,
 };
 
 module.exports = nextConfig;
