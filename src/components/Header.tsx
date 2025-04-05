@@ -33,7 +33,7 @@ const Header = () => {
     >
       <div className="container mx-auto flex justify-between items-center">
         <motion.div
-          className="text-[var(--accent-primary)] font-mono text-lg sm:text-xl font-bold"
+          className="text-[var(--accent-primary)] font-mono text-sm xs:text-base sm:text-lg md:text-xl font-bold whitespace-nowrap overflow-x-auto"
           whileHover={{ scale: 1.05 }}
         >
           <span className="text-[var(--editor-keyword)]">const</span>{" "}
@@ -43,7 +43,7 @@ const Header = () => {
         </motion.div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:block">
+        <nav className="hidden md:block">
           <ul className="flex space-x-6">
             {menuItems.map((item, index) => (
               <motion.li key={index} whileHover={{ y: -2 }} className="relative group">
@@ -74,7 +74,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-[var(--editor-text)] focus:outline-none"
+          className="md:hidden text-[var(--editor-text)] focus:outline-none"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -86,7 +86,7 @@ const Header = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="lg:hidden fixed inset-0 top-[73px] bg-[var(--editor-bg)] z-40"
+            className="md:hidden fixed inset-0 top-[73px] bg-[var(--editor-bg)] z-40"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "100vh" }}
             exit={{ opacity: 0, height: 0 }}

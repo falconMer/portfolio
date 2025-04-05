@@ -97,7 +97,7 @@ const Skills = () => {
               <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[var(--editor-keyword)]">{category.title}</h3>
 
               <motion.div
-                className="grid grid-cols-2 gap-4"
+                className="grid grid-cols-1 xs:grid-cols-2 gap-4"
                 variants={container}
                 initial="hidden"
                 whileInView="show"

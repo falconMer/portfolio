@@ -6,7 +6,7 @@ import { FaArrowDown } from 'react-icons/fa';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-24 md:pt-28 pb-10 px-4">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-16 sm:pt-20 md:pt-28 pb-10 px-4">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10">
           <motion.div

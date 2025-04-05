@@ -230,7 +230,7 @@ const Contact = () => {
             </div>
 
             <div className="font-mono text-sm mb-6">
-              <pre className="bg-[var(--editor-bg)] p-4 rounded-md overflow-x-auto">
+              <pre className="bg-[var(--editor-bg)] p-2 sm:p-4 rounded-md overflow-x-auto text-xs sm:text-sm">
                 <code>
                   <span className="text-[var(--editor-punctuation)]">{"{"}</span>
                   <br />
