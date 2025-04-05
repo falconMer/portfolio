@@ -97,7 +97,7 @@ const Skills = () => {
               <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[var(--editor-keyword)]">{category.title}</h3>
 
               <motion.div
-                className="grid grid-cols-1 xs:grid-cols-2 gap-4"
+                className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4"
                 variants={container}
                 initial="hidden"
                 whileInView="show"
@@ -106,11 +106,11 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skillIndex}
-                    className="flex flex-col items-center"
+                    className="flex flex-row items-center gap-2 sm:gap-3"
                     variants={item}
                   >
                     <motion.div
-                      className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full mb-2"
+                      className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full"
                       style={{ backgroundColor: `${skill.color}20` }}
                       whileHover={{ scale: 1.1 }}
                     >
