@@ -44,7 +44,7 @@ module.exports = nextConfig;
 
 ```toml
 [build]
-  command = "npm run build && npm run export"
+  command = "npm run build"
   publish = "out"
 
 [build.environment]
@@ -68,11 +68,12 @@ module.exports = nextConfig;
 "scripts": {
   "dev": "next dev --turbopack",
   "build": "next build",
-  "export": "next export",
   "start": "next start",
   "lint": "next lint"
 }
 ```
+
+**Note**: The `next export` command has been removed in Next.js 13.3.0 and later. Instead, we use the `output: 'export'` option in next.config.js, which automatically generates the static export during the build process.
 
 ## Deployment Steps
 
@@ -100,7 +101,7 @@ Configure the following build settings:
 
 - **Branch to deploy**: `main` (or your default branch)
 - **Base directory**: (leave blank)
-- **Build command**: `npm run build && npm run export`
+- **Build command**: `npm run build`
 - **Publish directory**: `out`
 - **Advanced build settings**: Click to expand and add the following environment variables:
   - `NEXT_PUBLIC_EMAILJS_SERVICE_ID`: Your EmailJS service ID
