@@ -84,11 +84,11 @@ const Skills = () => {
           <div className="w-20 h-1 bg-[var(--accent-primary)] mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
-              className="bg-[var(--editor-line)] rounded-lg p-6"
+              className="bg-[var(--editor-line)] rounded-lg p-5 sm:p-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -97,7 +97,7 @@ const Skills = () => {
               <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[var(--editor-keyword)]">{category.title}</h3>
 
               <motion.div
-                className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4"
+                className="flex flex-wrap gap-3 sm:gap-4"
                 variants={container}
                 initial="hidden"
                 whileInView="show"
@@ -106,19 +106,14 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skillIndex}
-                    className="flex flex-row items-center gap-2 sm:gap-3"
+                    className="inline-flex items-center bg-[var(--editor-bg)]/50 rounded-full px-3 py-2 gap-2.5"
                     variants={item}
+                    whileHover={{ scale: 1.05 }}
                   >
-                    <motion.div
-                      className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full"
-                      style={{ backgroundColor: `${skill.color}20` }}
-                      whileHover={{ scale: 1.1 }}
-                    >
-                      <span className="text-xl sm:text-2xl" style={{ color: skill.color }}>
-                        {skill.icon}
-                      </span>
-                    </motion.div>
-                    <span className="text-xs sm:text-sm text-[var(--editor-text)]">{skill.name}</span>
+                    <span className="text-xl sm:text-2xl" style={{ color: skill.color }}>
+                      {skill.icon}
+                    </span>
+                    <span className="text-sm sm:text-base text-[var(--editor-text)]">{skill.name}</span>
                   </motion.div>
                 ))}
               </motion.div>
