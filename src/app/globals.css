@@ -3,24 +3,114 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* IDE Theme Colors */
+  --editor-bg: #1e1e1e;
+  --editor-line: #2d2d2d;
+  --editor-text: #d4d4d4;
+  --editor-comment: #6a9955;
+  --editor-keyword: #569cd6;
+  --editor-function: #dcdcaa;
+  --editor-string: #ce9178;
+  --editor-number: #b5cea8;
+  --editor-class: #4ec9b0;
+  --editor-variable: #9cdcfe;
+  --editor-property: #9cdcfe;
+  --editor-operator: #d4d4d4;
+  --editor-punctuation: #d4d4d4;
+
+  /* Accent Colors */
+  --accent-primary: #0ea5e9; /* sky-500 */
+  --accent-secondary: #8b5cf6; /* violet-500 */
+  --accent-tertiary: #10b981; /* emerald-500 */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--editor-bg);
+    --foreground: var(--editor-text);
   }
+}
+
+.dark {
+  --background: var(--editor-bg);
+  --foreground: var(--editor-text);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--editor-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--editor-line);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Animation Utilities */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.5s ease-in-out;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.5s ease-in-out;
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
 }
