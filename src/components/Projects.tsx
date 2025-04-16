@@ -8,6 +8,14 @@ import Image from 'next/image';
 const Projects = () => {
   const projects = [
     {
+      title: "BarberFlow – Barbershop Lead-Gen Site",
+      description: "A sleek, animated website for a modern barbershop, built to drive bookings and showcase services with style.",
+      image: "/images/projects/barberflow.png",
+      technologies: ["Next.js", "React", "Tailwind CSS"],
+      liveLink: "https://primecuts.netlify.app/",
+      githubLink: null
+    },
+    {
       title: "Plumbing Business Lead Generation Website",
       description: "A lead generation website for a plumbing business, designed to attract potential customers and convert visitors into leads.",
       image: "/images/projects/plumbingbuisness.png",
@@ -97,6 +105,18 @@ const Projects = () => {
                     >
                       <FaExternalLinkAlt /> Live Demo
                     </motion.a>
+                    {project.githubLink && (
+                      <motion.a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-[var(--editor-bg)] text-[var(--editor-text)] border border-[var(--editor-border)] rounded-md text-xs sm:text-sm"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <FaCode /> View Code
+                      </motion.a>
+                    )}
                   </div>
                 </div>
               </div>
