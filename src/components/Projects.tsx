@@ -10,7 +10,7 @@ const Projects = () => {
     {
       title: "BarberFlow – Barbershop Lead-Gen Site",
       description: "A sleek, animated website for a modern barbershop, built to drive bookings and showcase services with style.",
-      image: "/images/projects/barbershop.png",
+      image: "/images/projects/barbershop-optimized.webp",
       technologies: ["Next.js", "React", "Tailwind CSS"],
       liveLink: "https://primecuts.netlify.app/",
       githubLink: null
@@ -18,7 +18,7 @@ const Projects = () => {
     {
       title: "Plumbing Business Lead Generation Website",
       description: "A lead generation website for a plumbing business, designed to attract potential customers and convert visitors into leads.",
-      image: "/images/projects/plumbingbuisness.png",
+      image: "/images/projects/plumbingbuisness-optimized.webp",
       technologies: ["Next.js", "React", "Tailwind CSS"],
       liveLink: "https://plumberpreview-falconmer-smailmersads-projects.vercel.app/",
       githubLink: null
