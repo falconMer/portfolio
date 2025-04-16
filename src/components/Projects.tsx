@@ -56,7 +56,7 @@ const Projects = () => {
               <div className="flex flex-col md:flex-row overflow-hidden">
                 <div className="md:w-1/2 relative">
                   <div className="aspect-[1897/915] relative rounded-lg overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] opacity-10 z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] opacity-0 z-10"></div>
                     <Image
                       src={project.image}
                       alt={project.title}
